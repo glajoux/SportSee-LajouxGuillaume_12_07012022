@@ -3,13 +3,18 @@ import { NavLink } from "react-router-dom";
 import Navigation from "../navigation/Navigation";
 import "./header.css";
 
-function Header(props) {
+/**
+ * React Component displaying header
+ * @returns {ReactElement}
+ */
+
+function Header() {
   return (
     <header>
       <NavLink exact to="/">
-        <div className="logo-container">
+        <h1 className="logo-container">
           <img src={logo} alt="logo" />
-        </div>
+        </h1>
       </NavLink>
       <Navigation />
     </header>

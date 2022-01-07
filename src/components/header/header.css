@@ -4,6 +4,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  height: 7vh;
 }
 
 .header-li {

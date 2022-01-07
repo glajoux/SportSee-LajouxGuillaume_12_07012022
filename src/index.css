@@ -11,6 +11,8 @@
   --color-red: #ff0000;
   --color-info-red: #e60000;
   --color-grey: #282d30;
+  --color-bg: #e5e5e5;
+  --color-bg-dark: #fbfbfb;
 }
 
 li {
