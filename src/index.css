@@ -12,3 +12,11 @@
   --color-info-red: #e60000;
   --color-grey: #282d30;
 }
+
+li {
+  list-style: none;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}

@@ -1,3 +1,32 @@
+header {
+  display: flex;
+  background-color: var(--color-header);
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.header-li {
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.header-li a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .logo-container {
   display: flex;
+}
+
+nav {
+  width: 80%;
+}
+
+.header-ul {
+  display: flex;
+  justify-content: space-around;
 }

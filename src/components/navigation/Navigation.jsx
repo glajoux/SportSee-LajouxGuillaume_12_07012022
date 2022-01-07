@@ -4,15 +4,15 @@ import { NavLink } from "react-router-dom";
 function Navigation(props) {
   return (
     <nav>
-      <ul>
-        <li>
+      <ul className="header-ul">
+        <li className="header-li">
           <NavLink exact to="/">
             Accueil
           </NavLink>
         </li>
-        <li>Profil</li>
-        <li>Réglage</li>
-        <li>Communauté</li>
+        <li className="header-li">Profil</li>
+        <li className="header-li">Réglage</li>
+        <li className="header-li">Communauté</li>
       </ul>
     </nav>
   );
