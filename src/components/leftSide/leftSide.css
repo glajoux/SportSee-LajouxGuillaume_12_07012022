@@ -1,6 +1,7 @@
 aside {
   background-color: var(--color-header);
   width: 8%;
+  max-width: 120px;
   height: 93vh;
   display: flex;
   flex-direction: column;

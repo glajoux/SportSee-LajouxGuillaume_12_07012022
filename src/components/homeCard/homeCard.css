@@ -1,0 +1,21 @@
+.userList a {
+  text-decoration: none;
+  color: #000;
+}
+
+.userList {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5rem;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user img {
+  width: 3rem;
+  margin-bottom: 0.8rem;
+}
