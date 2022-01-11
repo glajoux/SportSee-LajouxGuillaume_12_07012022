@@ -11,7 +11,7 @@ import "./header.css";
 function Header() {
   return (
     <header>
-      <NavLink exact to="/">
+      <NavLink exact="true" to="/">
         <h1 className="logo-container">
           <img src={logo} alt="logo" />
         </h1>
