@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
+import UserMapper from "../../mapper/UserMapper";
 
-export function useFetch(url, mapperFunction) {
+export function useFetchUser(url) {
   const [data, setData] = useState({});
   const [isLoading, setLoading] = useState(true);
   useEffect(() => {
@@ -8,7 +9,7 @@ export function useFetch(url, mapperFunction) {
     async function fetchData() {
       const response = await fetch(url);
       const data = await response.json();
-      setData(mapperFunction.convertToUser(data));
+      setData(UserMapper.convertToUser(data));
       setLoading(false);
     }
     setLoading(true);

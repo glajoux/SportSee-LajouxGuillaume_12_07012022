@@ -1,0 +1,9 @@
+.hello-titre {
+  font-weight: 500;
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.hello-titre span {
+  color: red;
+}

@@ -1,4 +1,8 @@
 main {
   display: flex;
-  background-color: var(--color-bg);
+}
+
+.dashboard {
+  width: 80%;
+  margin: 3rem 5rem;
 }
