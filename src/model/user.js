@@ -9,6 +9,7 @@ export default class User {
     proteinCount,
     carbohydrateCount,
     lipidCount,
+    todayScore,
     keyData
   ) {
     this.id = id;
@@ -20,6 +21,7 @@ export default class User {
     this.proteinCount = proteinCount;
     this.carbohydrateCount = carbohydrateCount;
     this.lipidCount = lipidCount;
+    this.todayScore = todayScore;
     this.keyData = keyData;
   }
 }
