@@ -1,0 +1,6 @@
+.radar {
+  background-color: var(--color-grey);
+  border-radius: 5px;
+  width: 260px;
+  height: 270px;
+}

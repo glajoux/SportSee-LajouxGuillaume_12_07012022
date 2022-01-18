@@ -12,6 +12,8 @@ import ActivityMapper from "../../mapper/ActivityMapper";
 import AverageSessionsMapper from "../../mapper/AverageSessionsMapper";
 import PerformanceMapper from "../../mapper/PerformanceMapper";
 import ActiviteQuot from "../../components/actviviteQuot/ActiviteQuot";
+import AverageSessions from "../../components/averageSession/AverageSessions";
+import RadarPerf from "../../components/radarPerf/RadarPerf";
 
 function Dashboard() {
   const idUrl = useParams();
@@ -37,10 +39,6 @@ function Dashboard() {
   );
   console.log(performance);
 
-  // const nutritionArray = ["calorie", "proteine", "glucide", "lipide"];
-  // const keyOfKeyData = Object.keys(keyData);
-  // console.log(keyOfKeyData);
-
   return (
     <>
       <Header />
@@ -50,11 +48,15 @@ function Dashboard() {
           <HelloUser prenom={firstName} />
           <section>
             <div className="graph">
-              <article className="activite-quot">
-                <ActiviteQuot activite={activity} />
+              <article>
+                <ActiviteQuot activite={activity.data} />
               </article>
-              <article className="duree-moy"></article>
-              <article className="radar"></article>
+              <article className="duree-moy">
+                <AverageSessions average={averageSessions} />
+              </article>
+              <article className="radar">
+                <RadarPerf perf={performance} />
+              </article>
               <article className="score"></article>
             </div>
             <article className="sante">

@@ -1,0 +1,6 @@
+.average {
+  background: var(--color-red);
+  width: 260px;
+  height: 270px;
+  border-radius: 5px;
+}
