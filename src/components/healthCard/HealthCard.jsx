@@ -21,8 +21,10 @@ function HealthCard(props) {
       }
       let calorieNumber = makeFloatNumber(props.calorie.calorieCount / 1000);
       return (
-        <div className="nutri-Card">
-          <img src={calories} alt="calorie" />
+        <div className="nutri-card">
+          <div className="calorie">
+            <img src={calories} alt="calorie" />
+          </div>
           <div>
             <h3>{calorieNumber}kcal</h3>
             <p>Calories</p>
@@ -32,8 +34,10 @@ function HealthCard(props) {
     }
     if (props.prot) {
       return (
-        <div className="nutri-Card">
-          <img src={prot} alt="protéine" />
+        <div className="nutri-card">
+          <div className="proteine">
+            <img src={prot} alt="protéine" />
+          </div>
           <div>
             <h3>{props.prot.proteinCount}g</h3>
             <p>Protéines</p>
@@ -43,8 +47,10 @@ function HealthCard(props) {
     }
     if (props.glucide) {
       return (
-        <div className="nutri-Card">
-          <img src={glucides} alt="glucide" />
+        <div className="nutri-card">
+          <div className="glucide">
+            <img src={glucides} alt="glucide" />
+          </div>
           <div>
             <h3>{props.glucide.carbohydrateCount}g</h3>
             <p>Glucides</p>
@@ -54,8 +60,10 @@ function HealthCard(props) {
     }
     if (props.lipide) {
       return (
-        <div className="nutri-Card">
-          <img src={lipides} alt="lipide" />
+        <div className="nutri-card">
+          <div className="lipide">
+            <img src={lipides} alt="lipide" />
+          </div>
           <div>
             <h3>{props.lipide.lipidCount}g</h3>
             <p>Lipides</p>

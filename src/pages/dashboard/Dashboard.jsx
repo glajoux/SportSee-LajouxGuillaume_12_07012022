@@ -46,18 +46,20 @@ function Dashboard() {
         <LeftSide />
         <div className="dashboard">
           <HelloUser prenom={firstName} />
-          <section>
+          <section className="graph-section">
             <div className="graph">
-              <article>
+              <article className="graph-bar-activity">
                 <ActiviteQuot activite={activity.data} />
               </article>
-              <article className="duree-moy">
-                <AverageSessions average={averageSessions} />
-              </article>
-              <article className="radar">
-                <RadarPerf perf={performance} />
-              </article>
-              <article className="score"></article>
+              <div className="min-graph-card">
+                <article className="duree-moy">
+                  <AverageSessions average={averageSessions.data} />
+                </article>
+                <article className="radar">
+                  <RadarPerf perf={performance} />
+                </article>
+                <article className="score"></article>
+              </div>
             </div>
             <article className="sante">
               <HealthCard calorie={keyData} />

@@ -1,0 +1,62 @@
+.nutri-card {
+  background-color: var(--color-bg-dark);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  width: 260px;
+  height: 125px;
+  align-items: center;
+}
+
+.calorie {
+  background-color: rgba(255, 0, 0, 0.07);
+  border-radius: 6px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nutri-card h3 {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+
+.nutri-card p {
+  color: #74798c;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.proteine {
+  background: rgba(74, 184, 255, 0.1);
+  border-radius: 6px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glucide {
+  background: rgba(249, 206, 35, 0.1);
+  border-radius: 6px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lipide {
+  background: rgba(253, 81, 129, 0.1);
+  border-radius: 6px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

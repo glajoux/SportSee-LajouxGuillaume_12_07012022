@@ -21,7 +21,7 @@ function ActiviteQuot({ activite }) {
           <li className="poids">
             <span>{payload[0].value}</span>
           </li>
-          <li className="calorie">
+          <li className="calorie-legend">
             {" "}
             <span>{payload[1].value}</span>
           </li>
@@ -35,7 +35,6 @@ function ActiviteQuot({ activite }) {
       return (
         <div className="activite-quot-tooltip">
           <span>{payload[0].value}kg</span>
-
           <span>{payload[1].value}kCal</span>
         </div>
       );
@@ -45,7 +44,6 @@ function ActiviteQuot({ activite }) {
 
   return (
     <div className="activite-quot">
-      <span></span>
       <BarChart
         width={800}
         height={450}
@@ -53,7 +51,7 @@ function ActiviteQuot({ activite }) {
         margin={{ top: 20, right: 0, bottom: 20, left: 20 }}
       >
         <CartesianGrid strokeDasharray={"3"} vertical={false} />
-        <XAxis dataKey="day" />
+        <XAxis dataKey="day" tickLine={false} />
         <YAxis
           dataKey={"kilogram"}
           orientation="right"
