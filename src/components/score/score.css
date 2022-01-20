@@ -1,0 +1,34 @@
+.legendScore {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.titreLegendScore {
+  color: #20253a;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
+  margin: 1rem;
+}
+
+.textScoreLegend {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 450%;
+  left: 35%;
+}
+
+.pourcentage {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.objectifScore {
+  color: rgba(40, 45, 48, 0.6);
+  font-weight: 500;
+  font-style: normal;
+}

@@ -4,24 +4,22 @@ export default class User {
     firstName,
     lastName,
     age,
-    score,
     calorieCount,
     proteinCount,
     carbohydrateCount,
     lipidCount,
-    todayScore,
-    keyData
+    keyData,
+    score
   ) {
     this.id = id;
     this.firstName = firstName;
     this.lastName = lastName;
     this.age = age;
-    this.score = score;
     this.calorieCount = calorieCount;
     this.proteinCount = proteinCount;
     this.carbohydrateCount = carbohydrateCount;
     this.lipidCount = lipidCount;
-    this.todayScore = todayScore;
     this.keyData = keyData;
+    this.score = score;
   }
 }

@@ -14,6 +14,7 @@ import PerformanceMapper from "../../mapper/PerformanceMapper";
 import ActiviteQuot from "../../components/actviviteQuot/ActiviteQuot";
 import AverageSessions from "../../components/averageSession/AverageSessions";
 import RadarPerf from "../../components/radarPerf/RadarPerf";
+import Score from "../../components/score/Score";
 
 function Dashboard() {
   const idUrl = useParams();
@@ -22,6 +23,7 @@ function Dashboard() {
   const data = useFetch(`${path}${idUrl.userId}`, UserMapper);
   const firstName = data.data.firstName;
   const keyData = data.data.keyData;
+  const score = data.data.score;
   console.log(data);
 
   const activity = useFetch(`${path}${idUrl.userId}/activity`, ActivityMapper);
@@ -37,7 +39,7 @@ function Dashboard() {
     `${path}${idUrl.userId}/performance`,
     PerformanceMapper
   );
-  console.log(performance);
+  console.log(performance.data);
 
   return (
     <>
@@ -56,9 +58,11 @@ function Dashboard() {
                   <AverageSessions average={averageSessions.data} />
                 </article>
                 <article className="radar">
-                  <RadarPerf perf={performance} />
+                  <RadarPerf perf={performance.data} />
                 </article>
-                <article className="score"></article>
+                <article className="score">
+                  <Score score={data.data.score} />
+                </article>
               </div>
             </div>
             <article className="sante">

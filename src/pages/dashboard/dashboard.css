@@ -29,3 +29,9 @@ main {
   flex-direction: row;
   justify-content: space-between;
 }
+
+.score {
+  background-color: var(--color-bg-dark);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+  border-radius: 5px;
+}
