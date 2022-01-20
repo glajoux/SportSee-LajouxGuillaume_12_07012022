@@ -23,7 +23,7 @@ function Dashboard() {
   const data = useFetch(`${path}${idUrl.userId}`, UserMapper);
   const firstName = data.data.firstName;
   const keyData = data.data.keyData;
-  const score = data.data.score;
+
   console.log(data);
 
   const activity = useFetch(`${path}${idUrl.userId}/activity`, ActivityMapper);

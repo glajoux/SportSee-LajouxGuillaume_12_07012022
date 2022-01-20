@@ -4,7 +4,7 @@ main {
 
 .dashboard {
   width: 80%;
-  margin: 3rem 5rem;
+  margin: auto;
 }
 
 .graph-section {
@@ -22,6 +22,8 @@ main {
 .graph {
   display: flex;
   flex-direction: column;
+  flex: 2;
+  margin-right: 2rem;
 }
 
 .min-graph-card {

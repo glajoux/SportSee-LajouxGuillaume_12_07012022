@@ -13,7 +13,10 @@ function RadarPerf({ perf }) {
   return (
     <div>
       <RadarChart outerRadius={90} width={260} height={270} data={perf.data}>
-        <PolarAngleAxis dataKey={"kind"} />
+        <PolarAngleAxis
+          dataKey={"kind"}
+          tick={{ fill: "#fff", fontSize: "0.8rem" }}
+        />
         <PolarRadiusAxis
           angle={30}
           domain={[0, "auto"]}
