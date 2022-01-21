@@ -10,6 +10,7 @@ import {
   CartesianGrid,
 } from "recharts";
 import "./activiteQuot.css";
+import PropTypes from "prop-types";
 
 function ActiviteQuot({ activite }) {
   console.log(activite);
@@ -90,5 +91,16 @@ function ActiviteQuot({ activite }) {
     </div>
   );
 }
+
+ActiviteQuot.propTypes = {
+  activite: PropTypes.shape({
+    userId: PropTypes.number,
+    session: PropTypes.shape({
+      day: PropTypes.number,
+      kilogram: PropTypes.number,
+      calories: PropTypes.number,
+    }),
+  }),
+};
 
 export default ActiviteQuot;

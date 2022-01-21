@@ -8,6 +8,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import "./radarPerf.css";
+import PropTypes from "prop-types";
 
 function RadarPerf({ perf }) {
   console.log(perf);
@@ -33,5 +34,16 @@ function RadarPerf({ perf }) {
     </div>
   );
 }
+
+RadarPerf.propTypes = {
+  userId: PropTypes.number,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      kind: PropTypes.string,
+      value: PropTypes.number,
+    })
+  ),
+  kind: PropTypes.objectOf(PropTypes.number),
+};
 
 export default RadarPerf;

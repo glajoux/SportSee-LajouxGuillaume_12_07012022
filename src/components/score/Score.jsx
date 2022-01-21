@@ -6,6 +6,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import PropTypes from "prop-types";
 
 function Score({ score }) {
   console.log(score);
@@ -47,5 +48,14 @@ function Score({ score }) {
     </div>
   );
 }
+
+Score.propTypes = {
+  score: PropTypes.arrayOf(
+    PropTypes.shape({
+      score: PropTypes.number,
+      firstName: PropTypes.string,
+    })
+  ),
+};
 
 export default Score;

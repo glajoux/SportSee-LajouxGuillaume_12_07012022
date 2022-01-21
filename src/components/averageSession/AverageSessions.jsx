@@ -9,6 +9,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import "./averageSession.css";
+import PropTypes from "prop-types";
 
 function AverageSessions({ average }) {
   console.log(average);
@@ -63,5 +64,17 @@ function AverageSessions({ average }) {
     </div>
   );
 }
+
+AverageSessions.propTypes = {
+  average: PropTypes.shape({
+    userId: PropTypes.number,
+    sessions: PropTypes.arrayOf(
+      PropTypes.shape({
+        day: PropTypes.string,
+        sessionLength: PropTypes.number,
+      })
+    ),
+  }),
+};
 
 export default AverageSessions;
