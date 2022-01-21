@@ -3,37 +3,77 @@ main {
 }
 
 .dashboard {
-  width: 80%;
+  width: 85%;
+  max-width: 1240px;
   margin: auto;
+  height: 100%;
 }
 
 .graph-section {
   display: flex;
   margin-top: 4rem;
   justify-content: space-between;
+  max-width: 1240px;
+  height: 100%;
 }
 
 .sante {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 20%;
+  min-height: 100%;
 }
 
 .graph {
   display: flex;
   flex-direction: column;
-  flex: 2;
+  width: 80%;
   margin-right: 2rem;
+  height: 100%;
+}
+
+.graph-bar-activity {
+  width: 100%;
+  height: 45%;
 }
 
 .min-graph-card {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
+  height: 50%;
+}
+
+.duree-moy,
+.radar,
+.score {
+  width: 32%;
+  height: 100%;
 }
 
 .score {
   background-color: var(--color-bg-dark);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
   border-radius: 5px;
+}
+
+/* .radar {
+  background-color: var(--color-grey);
+  border-radius: 5px;
+} */
+
+@media screen and (max-width: 1120px) {
+  main {
+    max-height: 693px;
+  }
+
+  .dashboard {
+    margin-top: 1.5rem;
+  }
+
+  .graph-section {
+    margin-top: 1rem;
+  }
 }

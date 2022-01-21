@@ -7,3 +7,10 @@
 .hello-titre span {
   color: red;
 }
+
+@media screen and (max-width: 1120px) {
+  .hello-titre {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+}

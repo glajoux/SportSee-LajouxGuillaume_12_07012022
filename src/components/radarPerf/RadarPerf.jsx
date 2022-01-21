@@ -5,27 +5,31 @@ import {
   PolarAngleAxis,
   PolarRadiusAxis,
   RadarChart,
+  ResponsiveContainer,
 } from "recharts";
 import "./radarPerf.css";
 
 function RadarPerf({ perf }) {
   console.log(perf);
+
   return (
-    <div>
-      <RadarChart outerRadius={90} width={260} height={270} data={perf.data}>
-        <PolarAngleAxis
-          dataKey={"kind"}
-          tick={{ fill: "#fff", fontSize: "0.8rem" }}
-        />
-        <PolarRadiusAxis
-          angle={30}
-          domain={[0, "auto"]}
-          tick={false}
-          axisLine={false}
-        />
-        <PolarGrid />
-        <Radar dataKey={"value"} fill="rgba(255, 1, 1, 0.7)" />
-      </RadarChart>
+    <div className="radar-graph">
+      <ResponsiveContainer width={"100%"} aspect={0.7}>
+        <RadarChart data={perf.data} outerRadius={"70%"}>
+          <PolarAngleAxis
+            dataKey={"kind"}
+            tick={{ fill: "#fff", fontSize: "0.7rem" }}
+          />
+          <PolarRadiusAxis
+            angle={30}
+            domain={[0, "auto"]}
+            tick={false}
+            axisLine={false}
+          />
+          <PolarGrid />
+          <Radar dataKey={"value"} fill="rgba(255, 1, 1, 0.7)" />
+        </RadarChart>
+      </ResponsiveContainer>
     </div>
   );
 }

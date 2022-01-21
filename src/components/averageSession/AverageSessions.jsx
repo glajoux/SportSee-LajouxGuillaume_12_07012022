@@ -1,5 +1,13 @@
 import React from "react";
-import { LineChart, XAxis, YAxis, Tooltip, Line, Legend } from "recharts";
+import {
+  LineChart,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Line,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
 import "./averageSession.css";
 
 function AverageSessions({ average }) {
@@ -21,35 +29,37 @@ function AverageSessions({ average }) {
 
   return (
     <div className="average">
-      <LineChart width={240} height={260} data={average.sessions}>
-        <XAxis
-          dataKey={"day"}
-          axisLine={false}
-          tickLine={false}
-          stroke="rgba(255, 255, 255, 0.5)"
-        />
-        <YAxis hide={true} />
-        <Tooltip
-          content={averageTooltipRender}
-          cursor={{
-            stroke: "rgba(0, 0, 0, 0.1)",
-            strokeWidth: 50,
-            strokeHeight: 270,
-          }}
-        />
-        <Legend content={averageLegend} verticalAlign="top" />
-        <Line
-          dataKey={"sessionLength"}
-          type={"monotone"}
-          stroke="#fff"
-          dot={false}
-          activeDot={{
-            stroke: "#fff",
-            strokeWidth: 10,
-            strokeOpacity: 0.2,
-          }}
-        />
-      </LineChart>
+      <ResponsiveContainer width="100%" aspect={0.7}>
+        <LineChart data={average.sessions}>
+          <XAxis
+            dataKey={"day"}
+            axisLine={false}
+            tickLine={false}
+            stroke="rgba(255, 255, 255, 0.5)"
+          />
+          <YAxis hide={true} />
+          <Tooltip
+            content={averageTooltipRender}
+            cursor={{
+              stroke: "rgba(0, 0, 0, 0.1)",
+              strokeWidth: 50,
+              strokeHeight: 270,
+            }}
+          />
+          <Legend content={averageLegend} verticalAlign="top" />
+          <Line
+            dataKey={"sessionLength"}
+            type={"monotone"}
+            stroke="#fff"
+            dot={false}
+            activeDot={{
+              stroke: "#fff",
+              strokeWidth: 10,
+              strokeOpacity: 0.2,
+            }}
+          />
+        </LineChart>
+      </ResponsiveContainer>
     </div>
   );
 }

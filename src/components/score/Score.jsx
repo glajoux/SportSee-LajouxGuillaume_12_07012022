@@ -1,6 +1,11 @@
 import React from "react";
 import "./score.css";
-import { RadialBarChart, RadialBar, Legend } from "recharts";
+import {
+  RadialBarChart,
+  RadialBar,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
 
 function Score({ score }) {
   console.log(score);
@@ -24,20 +29,22 @@ function Score({ score }) {
   };
 
   return (
-    <div>
+    <div className="graph-score">
       {score && (
-        <RadialBarChart
-          width={260}
-          height={270}
-          data={score}
-          innerRadius="80%"
-          outerRadius="92%"
-          startAngle={225}
-          endAngle={225 - (score[0].score * 100 * 360) / 100} // Allows to make dynamic display of the bar which starts at the angle 225
-        >
-          <Legend content={scoreLegendRender} verticalAlign="top" />
-          <RadialBar dataKey={"score"} fill="#FF0000" cornerRadius={10} />
-        </RadialBarChart>
+        <ResponsiveContainer width={"100%"} aspect={0.75}>
+          <RadialBarChart
+            width={260}
+            height={270}
+            data={score}
+            innerRadius="80%"
+            outerRadius="92%"
+            startAngle={225}
+            endAngle={225 - (score[0].score * 100 * 360) / 100} // Allows to make dynamic display of the bar which starts at the angle 225
+          >
+            <Legend content={scoreLegendRender} verticalAlign="top" />
+            <RadialBar dataKey={"score"} fill="#FF0000" cornerRadius={10} />
+          </RadialBarChart>
+        </ResponsiveContainer>
       )}
     </div>
   );

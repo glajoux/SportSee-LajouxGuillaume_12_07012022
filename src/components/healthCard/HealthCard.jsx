@@ -11,9 +11,6 @@ import "./healthCard.css";
  * @returns {ReactElement}
  */
 function HealthCard(props) {
-  // const data = useFetch(`${path}${props.idUrl.userId}`, UserMapper);
-  // console.log(data.data);
-
   const healthCardFabrique = () => {
     if (props.calorie) {
       function makeFloatNumber(nbr) {
