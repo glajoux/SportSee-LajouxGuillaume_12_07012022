@@ -22,3 +22,7 @@ li {
 * {
   font-family: "Roboto", sans-serif;
 }
+
+body {
+  min-height: 100%;
+}

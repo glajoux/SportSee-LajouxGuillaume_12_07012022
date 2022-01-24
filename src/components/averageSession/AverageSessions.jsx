@@ -38,7 +38,7 @@ function AverageSessions({ average }) {
             tickLine={false}
             stroke="rgba(255, 255, 255, 0.5)"
           />
-          <YAxis hide={true} />
+          <YAxis hide={true} domain={[0, "dataMax + 30"]} />
           <Tooltip
             content={averageTooltipRender}
             cursor={{
