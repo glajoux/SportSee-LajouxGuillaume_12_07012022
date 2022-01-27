@@ -1,6 +1,14 @@
 import User from "../model/user";
 
+/**
+ * class to format user data
+ */
 export default class UserMapper {
+  /**
+   *
+   * @param {object} data data get from API
+   * @returns {object} return new instance of user as an object
+   */
   static convertToUser(data) {
     const score = () => {
       if (data.data.score != undefined) {

@@ -8,7 +8,7 @@ import PropTypes from "prop-types";
 
 /**
  * React Component dsiplaying the ritgh side bar with info of health
- * @param {*} props
+ * @param {object} props
  * @returns {ReactElement}
  */
 function HealthCard({ calorie, prot, glucide, lipide }) {

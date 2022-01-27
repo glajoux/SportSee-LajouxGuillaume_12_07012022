@@ -1,0 +1,17 @@
+.erreur {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 3rem;
+}
+
+.erreur-title {
+  font-size: 5rem;
+  padding-bottom: 2rem;
+}
+
+.erreur-para {
+  font-size: 1.5rem;
+}

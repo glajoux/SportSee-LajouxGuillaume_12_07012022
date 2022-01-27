@@ -1,3 +1,6 @@
+/**
+ * Class for create user data
+ */
 export default class User {
   constructor(
     id,

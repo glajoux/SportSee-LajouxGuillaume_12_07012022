@@ -11,6 +11,12 @@ import {
 import "./averageSession.css";
 import PropTypes from "prop-types";
 
+/**
+ * React Comoponent displaying the line chart of average sessions
+ * @param {{userId : number, sessions : array}}
+ * @param {array} sessions : array of object with data for the chart line
+ * @returns {ReactElement}
+ */
 function AverageSessions({ average }) {
   console.log(average);
   const averageTooltipRender = ({ active, payload }) => {
@@ -24,6 +30,10 @@ function AverageSessions({ average }) {
     return null;
   };
 
+  /**
+   * Displaying the title of the chart
+   * @returns {HTMLElement}
+   */
   const averageLegend = () => {
     return <h3 className="average-legend-title">Durée moyenne des sessions</h3>;
   };

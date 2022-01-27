@@ -1,7 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function Navigation(props) {
+/**
+ * React Component displaying the navigation
+ * @returns {ReactComponent}
+ */
+function Navigation() {
   return (
     <nav>
       <ul className="header-ul">
