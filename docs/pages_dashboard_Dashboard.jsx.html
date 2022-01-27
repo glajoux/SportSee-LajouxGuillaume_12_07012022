@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: pages/dashboard/Dashboard.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: pages/dashboard/Dashboard.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from "react";
+import Header from "../../components/header/Header";
+import LeftSide from "../../components/leftSide/LeftSide";
+import { useParams } from "react-router";
+import HelloUser from "../../components/helloUser/HelloUser";
+import HealthCard from "../../components/healthCard/HealthCard";
+import "./dashboard.css";
+import ActiviteQuot from "../../components/actviviteQuot/ActiviteQuot";
+import AverageSessions from "../../components/averageSession/AverageSessions";
+import RadarPerf from "../../components/radarPerf/RadarPerf";
+import Score from "../../components/score/Score";
+import { getUserInfo } from "../../utils/hooks/getUserInfo";
+import { getActivity } from "../../utils/hooks/getActivity";
+import { getPerformance } from "../../utils/hooks/getPerformance";
+import { getAverageSession } from "../../utils/hooks/getAverageSession";
+import Error from "../error/Error";
+
+/**
+ * React component displaying the dashboard page
+ * @returns {ReactElement}
+ */
+function Dashboard() {
+  const idUrl = useParams();
+  console.log(idUrl);
+
+  const data = getUserInfo(idUrl.userId);
+  console.log(data);
+
+  const firstName = data.data.firstName;
+  const keyData = data.data.keyData;
+
+  console.log(firstName);
+
+  const activity = getActivity(idUrl.userId);
+  console.log(activity);
+
+  const averageSessions = getAverageSession(idUrl.userId);
+  console.log(averageSessions);
+
+  const performance = getPerformance(idUrl.userId);
+  console.log(performance);
+
+  if (
+    data.error ||
+    activity.error ||
+    averageSessions.error ||
+    performance.error
+  ) {
+    return &lt;Error />;
+  } else {
+    return (
+      &lt;>
+        &lt;Header />
+        &lt;main>
+          &lt;LeftSide />
+          &lt;div className="dashboard">
+            {firstName &amp;&amp; &lt;HelloUser prenom={firstName} />}
+            &lt;section className="graph-section">
+              &lt;div className="graph">
+                &lt;article className="graph-bar-activity">
+                  &lt;ActiviteQuot activite={activity.data} />
+                &lt;/article>
+                &lt;div className="min-graph-card">
+                  &lt;article className="duree-moy">
+                    &lt;AverageSessions average={averageSessions.data} />
+                  &lt;/article>
+                  &lt;article className="radar">
+                    &lt;RadarPerf perf={performance.data} />
+                  &lt;/article>
+                  &lt;article className="score">
+                    &lt;Score score={data.data.score} />
+                  &lt;/article>
+                &lt;/div>
+              &lt;/div>
+              &lt;article className="sante">
+                &lt;HealthCard calorie={keyData} />
+                &lt;HealthCard prot={keyData} />
+                &lt;HealthCard glucide={keyData} />
+                &lt;HealthCard lipide={keyData} />
+              &lt;/article>
+            &lt;/section>
+          &lt;/div>
+        &lt;/main>
+      &lt;/>
+    );
+  }
+}
+
+export default Dashboard;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="module.exports.html">exports</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ActiviteQuot">ActiviteQuot</a></li><li><a href="global.html#App">App</a></li><li><a href="global.html#AverageSessions">AverageSessions</a></li><li><a href="global.html#convertToUser">convertToUser</a></li><li><a href="global.html#Dashboard">Dashboard</a></li><li><a href="global.html#Error">Error</a></li><li><a href="global.html#getActivity">getActivity</a></li><li><a href="global.html#getAverageSession">getAverageSession</a></li><li><a href="global.html#getPerformance">getPerformance</a></li><li><a href="global.html#getUserInfo">getUserInfo</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HealthCard">HealthCard</a></li><li><a href="global.html#HelloUser">HelloUser</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#HomeCard">HomeCard</a></li><li><a href="global.html#LeftSide">LeftSide</a></li><li><a href="global.html#Navigation">Navigation</a></li><li><a href="global.html#path">path</a></li><li><a href="global.html#RadarPerf">RadarPerf</a></li><li><a href="global.html#Score">Score</a></li><li><a href="global.html#UseFetch">UseFetch</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Thu Jan 27 2022 17:43:14 GMT+0100 (heure normale d’Europe centrale)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

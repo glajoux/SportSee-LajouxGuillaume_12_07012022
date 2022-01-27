@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/actviviteQuot/ActiviteQuot.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/actviviteQuot/ActiviteQuot.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from "react";
+import {
+  ResponsiveContainer,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Legend,
+  CartesianGrid,
+} from "recharts";
+import "./activiteQuot.css";
+import PropTypes from "prop-types";
+
+/**
+ * React Comoponent displaying the chart bar of daily activity
+ * @param {{userId : number, sessions : array}}
+ * @param {array} sessions : array of object with data for the chart bar
+ * @returns {ReactElement}
+ */
+function ActiviteQuot({ activite }) {
+  console.log(activite);
+
+  /**
+   * Custom legend to display on chart
+   * @param {object}  payload data of the content to be displayed in the legend
+   * @returns {HTMLElement} text
+   */
+  const activityLegendRender = ({ payload }) => {
+    return (
+      &lt;div className="activite-quot-legend">
+        &lt;h3>Activité quotidienne&lt;/h3>
+        &lt;ul>
+          &lt;li className="poids">
+            &lt;span>{payload[0].value}&lt;/span>
+          &lt;/li>
+          &lt;li className="calorie-legend">
+            {" "}
+            &lt;span>{payload[1].value}&lt;/span>
+          &lt;/li>
+        &lt;/ul>
+      &lt;/div>
+    );
+  };
+
+  /**
+   * Custom tooltip to display on chart on hover
+   * @param {boolean} active boolean to control if tooltip is visible or not
+   * @param {object}  payload data of the content to be displayed in the legend
+   * @returns {HTMLElement} text
+   */
+  const activityTooltipRender = ({ active, payload }) => {
+    if (active &amp;&amp; payload) {
+      return (
+        &lt;div className="activite-quot-tooltip">
+          &lt;span>{payload[0].value}kg&lt;/span>
+          &lt;span>{payload[1].value}kCal&lt;/span>
+        &lt;/div>
+      );
+    }
+    return null;
+  };
+
+  return (
+    &lt;div className="activite-quot">
+      &lt;ResponsiveContainer width="100%" aspect={3}>
+        &lt;BarChart
+          data={activite.sessions}
+          margin={{ top: 20, right: 0, bottom: 20, left: 20 }}
+        >
+          &lt;CartesianGrid strokeDasharray={"3"} vertical={false} />
+          &lt;XAxis dataKey="day" tickLine={false} />
+          &lt;YAxis
+            dataKey={"kilogram"}
+            orientation="right"
+            axisLine={false}
+            tickLine={false}
+            yAxisId={"kilogram"}
+            tickCount={3}
+            domain={["dataMax - 3", "dataMax"]}
+          />
+          &lt;YAxis hide={true} />
+          &lt;Tooltip content={activityTooltipRender} />
+          &lt;Legend
+            align="right"
+            verticalAlign="top"
+            iconType={"circle"}
+            iconSize={8}
+            height={70}
+            content={activityLegendRender}
+          />
+          &lt;Bar
+            dataKey="kilogram"
+            fill="#282D30"
+            barSize={7}
+            radius={[3, 3, 0, 0]}
+            name="Poids(kg)"
+          />
+          &lt;Bar
+            dataKey="calories"
+            fill="#E60000"
+            barSize={7}
+            radius={[3, 3, 0, 0]}
+            name="Calories brûlées (kCal)"
+          />
+        &lt;/BarChart>
+      &lt;/ResponsiveContainer>
+    &lt;/div>
+  );
+}
+
+ActiviteQuot.propTypes = {
+  activite: PropTypes.shape({
+    userId: PropTypes.number,
+    session: PropTypes.shape({
+      day: PropTypes.number,
+      kilogram: PropTypes.number,
+      calories: PropTypes.number,
+    }),
+  }),
+};
+
+export default ActiviteQuot;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="module.exports.html">exports</a></li></ul><h3>Global</h3><ul><li><a href="global.html#ActiviteQuot">ActiviteQuot</a></li><li><a href="global.html#App">App</a></li><li><a href="global.html#AverageSessions">AverageSessions</a></li><li><a href="global.html#convertToUser">convertToUser</a></li><li><a href="global.html#Dashboard">Dashboard</a></li><li><a href="global.html#Error">Error</a></li><li><a href="global.html#getActivity">getActivity</a></li><li><a href="global.html#getAverageSession">getAverageSession</a></li><li><a href="global.html#getPerformance">getPerformance</a></li><li><a href="global.html#getUserInfo">getUserInfo</a></li><li><a href="global.html#Header">Header</a></li><li><a href="global.html#HealthCard">HealthCard</a></li><li><a href="global.html#HelloUser">HelloUser</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#HomeCard">HomeCard</a></li><li><a href="global.html#LeftSide">LeftSide</a></li><li><a href="global.html#Navigation">Navigation</a></li><li><a href="global.html#path">path</a></li><li><a href="global.html#RadarPerf">RadarPerf</a></li><li><a href="global.html#Score">Score</a></li><li><a href="global.html#UseFetch">UseFetch</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Thu Jan 27 2022 17:43:14 GMT+0100 (heure normale d’Europe centrale)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

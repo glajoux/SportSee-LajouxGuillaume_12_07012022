@@ -12,9 +12,20 @@ import {
 import "./activiteQuot.css";
 import PropTypes from "prop-types";
 
+/**
+ * React Comoponent displaying the chart bar of daily activity
+ * @param {{userId : number, sessions : array}}
+ * @param {array} sessions : array of object with data for the chart bar
+ * @returns {ReactElement}
+ */
 function ActiviteQuot({ activite }) {
   console.log(activite);
 
+  /**
+   * Custom legend to display on chart
+   * @param {object}  payload data of the content to be displayed in the legend
+   * @returns {HTMLElement} text
+   */
   const activityLegendRender = ({ payload }) => {
     return (
       <div className="activite-quot-legend">
@@ -32,6 +43,12 @@ function ActiviteQuot({ activite }) {
     );
   };
 
+  /**
+   * Custom tooltip to display on chart on hover
+   * @param {boolean} active boolean to control if tooltip is visible or not
+   * @param {object}  payload data of the content to be displayed in the legend
+   * @returns {HTMLElement} text
+   */
   const activityTooltipRender = ({ active, payload }) => {
     if (active && payload) {
       return (

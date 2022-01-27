@@ -10,6 +10,13 @@ import {
 import "./radarPerf.css";
 import PropTypes from "prop-types";
 
+/**
+ * React Comoponent displaying the radar chart
+ * @param {{userId : number, kind : array, data: array}}
+ * @param {array} kind : array of object that are not use
+ * @param {array} data : array of object with data for the radar chart
+ * @returns {ReactElement}
+ */
 function RadarPerf({ perf }) {
   console.log(perf);
 
