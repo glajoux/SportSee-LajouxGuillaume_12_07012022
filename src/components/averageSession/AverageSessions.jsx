@@ -40,7 +40,7 @@ function AverageSessions({ average }) {
 
   return (
     <div className="average">
-      <ResponsiveContainer width="100%" aspect={0.7}>
+      <ResponsiveContainer width="100%" minHeight={270}>
         <LineChart data={average.sessions}>
           <XAxis
             dataKey={"day"}

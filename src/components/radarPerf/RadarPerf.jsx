@@ -22,8 +22,8 @@ function RadarPerf({ perf }) {
 
   return (
     <div className="radar-graph">
-      <ResponsiveContainer width={"100%"} aspect={0.7}>
-        <RadarChart data={perf.data} outerRadius={"70%"}>
+      <ResponsiveContainer width={"100%"} minHeight={270}>
+        <RadarChart data={perf.data} margin={{ left: 40, right: 40 }}>
           <PolarAngleAxis
             dataKey={"kind"}
             tick={{ fill: "#fff", fontSize: "0.7rem" }}
