@@ -1,25 +1,45 @@
-# Getting Started with Create React App
+[![forthebadge](https://img.shields.io/badge/Make%20with-React-blue)](https://forthebadge.com)
+[![forthebadge](https://img.shields.io/badge/Dependencie-React--router--dom-red)](https://forthebadge.com)
+[![forthebadge](https://img.shields.io/badge/Dependencie-Recharts-red)](https://forthebadge.com)
+[![forthebadge](https://img.shields.io/badge/Dependencie-Axios-red)](https://forthebadge.com)
+[![forthebadge](https://img.shields.io/badge/Dependencie-Jsdoc-red)](https://forthebadge.com)
+[![forthebadge](https://img.shields.io/badge/Author-Lajoux%20Guillaume-brightgreen)](https://forthebadge.com)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Sportsee
 
-## Available Scripts
+This project allow the user to track the number of sessions performed as well as the number of calories burned. This is the project 12 of the front-end developer cursus from [OpenClassrooms](https://openclassrooms.com/fr/paths/516-developpeur-dapplication-javascript-react).
 
-In the project directory, you can run:
+**Note** : This application needs to be connected to the api [Sportsee](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard).
 
-### `npm start`
+Please clone this repository and follow the instruction of the Readme to launch the api.
 
-Runs the app in the development mode.\
+## Installation
+
+1. Clone this repository
+2. Install dependencies :
+
+```sh
+# npm
+npm install
+
+```
+
+3. Launching the project
+
+```sh
+# npm
+npm start
+```
+
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+If this one is already used vsc will offer you an alternative.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. Build a production version
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
+```sh
+# npm
+npm run build
+```
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -29,42 +49,18 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Documentation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+[NodeJs (**Version 14.16.1**)](https://nodejs.org/en/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[React (**Version 17.0.2**)](https://fr.reactjs.org/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+[Create React App](https://github.com/facebook/create-react-app)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+[React-router-dom (**Version 6.2.1**)](https://reactrouter.com/)
 
-## Learn More
+[Rechart (**Version 2.1.8**)](https://recharts.org/en-US)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[Axios (**Version 0.25.0**)](https://github.com/axios/axios)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Documentation](https://glajoux.github.io/SportSee-LajouxGuillaume_12_07012022/) Made with [Jsdoc (**Version 3.6.10**)](https://jsdoc.app/)
