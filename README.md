@@ -64,3 +64,5 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 [Axios (**Version 0.25.0**)](https://github.com/axios/axios)
 
 [Documentation](https://glajoux.github.io/SportSee-LajouxGuillaume_12_07012022/) Made with [Jsdoc (**Version 3.6.10**)](https://jsdoc.app/)
+
+[Editeur de code : Visual Studio Code](https://code.visualstudio.com/)
