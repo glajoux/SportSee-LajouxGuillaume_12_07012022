@@ -36,4 +36,4 @@ const pathMocked = {
  * when deploying the API, change the path to the corresponding url
  * @type { string }
  */
-export const path = pathApi;
+export const path = pathMocked;

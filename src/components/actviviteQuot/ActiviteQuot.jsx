@@ -27,6 +27,7 @@ function ActiviteQuot({ activite }) {
    * @returns {HTMLElement} text
    */
   const activityLegendRender = ({ payload }) => {
+    console.log(payload);
     return (
       <div className="activite-quot-legend">
         <h3>Activité quotidienne</h3>
@@ -35,7 +36,6 @@ function ActiviteQuot({ activite }) {
             <span>{payload[0].value}</span>
           </li>
           <li className="calorie-legend">
-            {" "}
             <span>{payload[1].value}</span>
           </li>
         </ul>
